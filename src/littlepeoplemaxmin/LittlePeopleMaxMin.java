@@ -117,7 +117,15 @@ public class LittlePeopleMaxMin {
         System.out.println("Name: "+name[spot]+ " "+pic[spot]);
     }
     private static void showOldest(String name[],String pic[],int age[]) {
-
+        double maxAge=Integer.MIN_VALUE;
+        int spot=0;
+        for (int i=0; i<age.length;i++){
+            if (age[i]>maxAge){
+                maxAge=age[i];
+                spot=i;
+            }
+        }
+        System.out.println("Name: "+name[spot]+ " "+pic[spot]);
     }
     private static void showYoungest(String name[],String pic[],int age[]) {
         double minAge=Integer.MAX_VALUE;
