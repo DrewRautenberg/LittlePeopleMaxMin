@@ -140,7 +140,15 @@ public class LittlePeopleMaxMin {
     }
     // First alphabetically, by name (not the first name in the array)
     private static void showFirst(String name[],String pic[]) {
-
+        int index=0;
+        String tempFirst=name[0];
+        for (int i=1;i<name.length;i++){
+            if (tempFirst.compareTo(name[i])>0){
+                tempFirst=name[i];
+                index=i;
+            }
+        }
+        System.out.println("Name: "+name[index]+ " "+pic[index]);
     }
     // Last alphabetically, by name (not the last name in the array)
     private static void showLast(String name[],String pic[]) {
