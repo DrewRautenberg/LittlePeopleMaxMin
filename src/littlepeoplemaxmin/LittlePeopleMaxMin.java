@@ -46,8 +46,7 @@ public class LittlePeopleMaxMin {
                 + "F:  first (by name)\n"
                 + "L:  last (by name)\n";
         String userResponse = JOptionPane.showInputDialog(menu);
-        char choice = userResponse.charAt(0);
-        return choice;
+        return userResponse.charAt(0);
     }
 
     private static void showRawData(String[] name, String[] pic, int[] age,
@@ -65,101 +64,106 @@ public class LittlePeopleMaxMin {
         switch (choice) {
             case 'P':
             case 'p':
-                showPoorest(name,pic,salary);
+                showPoorest(name, pic, salary);
                 break;
             case 'R':
             case 'r':
-                showRichest(name,pic,salary);
+                showRichest(name, pic, salary);
                 break;
             case 'O':
             case 'o':
             case '0':                                     // zero, just in case
-                showOldest(name,pic,age);
+                showOldest(name, pic, age);
                 break;
             case 'Y':
             case 'y':
-                showYoungest(name,pic,age);
+                showYoungest(name, pic, age);
                 break;
             case 'F':
             case 'f':
-                showFirst(name,pic);
+                showFirst(name, pic);
                 break;
             case 'L':
             case 'l':
             case '1':                                      // one, just in case
-                showLast(name,pic);
+                showLast(name, pic);
                 break;
             default:
                 System.out.println("\nERROR:  option was invalid");
         }
     }
 
-    private static void showPoorest(String name[],String pic[],double salary[]) {
-        double minSal=Integer.MAX_VALUE;
-        int index=0;
-        for (int i=0; i<salary.length;i++){
-            if (salary[i]<minSal){
-                minSal=salary[i];
-                index=i;
+    private static void showPoorest(String name[], String pic[], double salary[]) {
+        double minSal = Integer.MAX_VALUE;
+        int index = 0;
+        for (int i = 0; i < salary.length; i++) {
+            if (salary[i] < minSal) {
+                minSal = salary[i];
+                index = i;
             }
         }
-        System.out.println("Name: "+name[index]+ " "+pic[index]);
+        System.out.println("Name: " + name[index] + " " + pic[index]);
     }
-    private static void showRichest(String name[],String pic[],double salary[]) {
-        double maxSal=Integer.MIN_VALUE;
-        int index=0;
-        for (int i=0; i<salary.length;i++){
-            if (salary[i]>maxSal){
-                maxSal=salary[i];
-                index=i;
+
+    private static void showRichest(String name[], String pic[], double salary[]) {
+        double maxSal = Integer.MIN_VALUE;
+        int index = 0;
+        for (int i = 0; i < salary.length; i++) {
+            if (salary[i] > maxSal) {
+                maxSal = salary[i];
+                index = i;
             }
         }
-        System.out.println("Name: "+name[index]+ " "+pic[index]);
+        System.out.println("Name: " + name[index] + " " + pic[index]);
     }
-    private static void showOldest(String name[],String pic[],int age[]) {
-        double maxAge=Integer.MIN_VALUE;
-        int index=0;
-        for (int i=0; i<age.length;i++){
-            if (age[i]>maxAge){
-                maxAge=age[i];
-                index=i;
+
+    private static void showOldest(String name[], String pic[], int age[]) {
+        double maxAge = Integer.MIN_VALUE;
+        int index = 0;
+        for (int i = 0; i < age.length; i++) {
+            if (age[i] > maxAge) {
+                maxAge = age[i];
+                index = i;
             }
         }
-        System.out.println("Name: "+name[index]+ " "+pic[index]);
+        System.out.println("Name: " + name[index] + " " + pic[index]);
     }
-    private static void showYoungest(String name[],String pic[],int age[]) {
-        double minAge=Integer.MAX_VALUE;
-        int index=0;
-        for (int i=0; i<age.length;i++){
-            if (age[i]<minAge){
-                minAge=age[i];
-                index=i;
+
+    private static void showYoungest(String name[], String pic[], int age[]) {
+        double minAge = Integer.MAX_VALUE;
+        int index = 0;
+        for (int i = 0; i < age.length; i++) {
+            if (age[i] < minAge) {
+                minAge = age[i];
+                index = i;
             }
         }
-        System.out.println("Name: "+name[index]+ " "+pic[index]);
+        System.out.println("Name: " + name[index] + " " + pic[index]);
     }
+
     // First alphabetically, by name (not the first name in the array)
-    private static void showFirst(String name[],String pic[]) {
-        int index=0;
-        String tempFirst=name[0];
-        for (int i=1;i<name.length;i++){
-            if (tempFirst.compareTo(name[i])>0){
-                tempFirst=name[i];
-                index=i;
+    private static void showFirst(String name[], String pic[]) {
+        int index = 0;
+        String tempFirst = name[0];
+        for (int i = 1; i < name.length; i++) {
+            if (tempFirst.compareTo(name[i]) > 0) {
+                tempFirst = name[i];
+                index = i;
             }
         }
-        System.out.println("Name: "+name[index]+ " "+pic[index]);
+        System.out.println("Name: " + name[index] + " " + pic[index]);
     }
+
     // Last alphabetically, by name (not the last name in the array)
-    private static void showLast(String name[],String pic[]) {
-        int index=0;
-        String tempFirst=name[0];
-        for (int i=1;i<name.length;i++){
-            if (tempFirst.compareTo(name[i])<0){
-                tempFirst=name[i];
-                index=i;
+    private static void showLast(String name[], String pic[]) {
+        int index = 0;
+        String tempFirst = name[0];
+        for (int i = 1; i < name.length; i++) {
+            if (tempFirst.compareTo(name[i]) < 0) {
+                tempFirst = name[i];
+                index = i;
             }
         }
-        System.out.println("Name: "+name[index]+ " "+pic[index]);
+        System.out.println("Name: " + name[index] + " " + pic[index]);
     }
 }
