@@ -95,7 +95,7 @@ public class LittlePeopleMaxMin {
 
     private static void showPoorest(String name[], String pic[], double salary[]) {
         double minSal = Integer.MAX_VALUE;
-        int index = 0;
+        int index = -1;
         for (int i = 0; i < salary.length; i++) {
             if (salary[i] < minSal) {
                 minSal = salary[i];
@@ -107,7 +107,7 @@ public class LittlePeopleMaxMin {
 
     private static void showRichest(String name[], String pic[], double salary[]) {
         double maxSal = Integer.MIN_VALUE;
-        int index = 0;
+        int index = -1;
         for (int i = 0; i < salary.length; i++) {
             if (salary[i] > maxSal) {
                 maxSal = salary[i];
@@ -119,7 +119,7 @@ public class LittlePeopleMaxMin {
 
     private static void showOldest(String name[], String pic[], int age[]) {
         double maxAge = Integer.MIN_VALUE;
-        int index = 0;
+        int index = -1;
         for (int i = 0; i < age.length; i++) {
             if (age[i] > maxAge) {
                 maxAge = age[i];
@@ -131,7 +131,7 @@ public class LittlePeopleMaxMin {
 
     private static void showYoungest(String name[], String pic[], int age[]) {
         double minAge = Integer.MAX_VALUE;
-        int index = 0;
+        int index = -1;
         for (int i = 0; i < age.length; i++) {
             if (age[i] < minAge) {
                 minAge = age[i];
@@ -143,7 +143,7 @@ public class LittlePeopleMaxMin {
 
     // First alphabetically, by name (not the first name in the array)
     private static void showFirst(String name[], String pic[]) {
-        int index = 0;
+        int index = -1;
         String tempFirst = name[0];
         for (int i = 1; i < name.length; i++) {
             if (tempFirst.compareTo(name[i]) > 0) {
@@ -156,7 +156,7 @@ public class LittlePeopleMaxMin {
 
     // Last alphabetically, by name (not the last name in the array)
     private static void showLast(String name[], String pic[]) {
-        int index = 0;
+        int index = -1;
         String tempFirst = name[0];
         for (int i = 1; i < name.length; i++) {
             if (tempFirst.compareTo(name[i]) < 0) {
