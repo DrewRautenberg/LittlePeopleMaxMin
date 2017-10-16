@@ -106,7 +106,15 @@ public class LittlePeopleMaxMin {
         System.out.println("Name: "+name[spot]+ " "+pic[spot]);
     }
     private static void showRichest(String name[],String pic[],double salary[]) {
-
+        double maxSal=Integer.MIN_VALUE;
+        int spot=0;
+        for (int i=0; i<salary.length;i++){
+            if (salary[i]>maxSal){
+                maxSal=salary[i];
+                spot=i;
+            }
+        }
+        System.out.println("Name: "+name[spot]+ " "+pic[spot]);
     }
     private static void showOldest(String name[],String pic[],int age[]) {
 
