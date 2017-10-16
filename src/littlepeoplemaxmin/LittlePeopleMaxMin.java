@@ -102,7 +102,7 @@ public class LittlePeopleMaxMin {
                 index = i;
             }
         }
-        System.out.println("Name: " + name[index] + " " + pic[index]);
+        System.out.println("Name: " + name[index] + " Picture: " + pic[index]);
     }
 
     private static void showRichest(String name[], String pic[], double salary[]) {
@@ -114,7 +114,7 @@ public class LittlePeopleMaxMin {
                 index = i;
             }
         }
-        System.out.println("Name: " + name[index] + " " + pic[index]);
+        System.out.println("Name: " + name[index] + " Picture: " + pic[index]);
     }
 
     private static void showOldest(String name[], String pic[], int age[]) {
@@ -126,7 +126,7 @@ public class LittlePeopleMaxMin {
                 index = i;
             }
         }
-        System.out.println("Name: " + name[index] + " " + pic[index]);
+        System.out.println("Name: " + name[index] + " Picture: " + pic[index]);
     }
 
     private static void showYoungest(String name[], String pic[], int age[]) {
@@ -138,7 +138,7 @@ public class LittlePeopleMaxMin {
                 index = i;
             }
         }
-        System.out.println("Name: " + name[index] + " " + pic[index]);
+        System.out.println("Name: " + name[index] + " Picture: " + pic[index]);
     }
 
     // First alphabetically, by name (not the first name in the array)
@@ -151,7 +151,7 @@ public class LittlePeopleMaxMin {
                 index = i;
             }
         }
-        System.out.println("Name: " + name[index] + " " + pic[index]);
+        System.out.println("Name: " + name[index] + " Picture: " + pic[index]);
     }
 
     // Last alphabetically, by name (not the last name in the array)
