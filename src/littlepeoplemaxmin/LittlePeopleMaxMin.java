@@ -164,6 +164,6 @@ public class LittlePeopleMaxMin {
                 index = i;
             }
         }
-        System.out.println("Name: " + name[index] + " " + pic[index]);
+        System.out.println("Name: " + name[index] + " Picture: " + pic[index]);
     }
 }
