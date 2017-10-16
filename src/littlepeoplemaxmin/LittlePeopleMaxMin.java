@@ -120,7 +120,15 @@ public class LittlePeopleMaxMin {
 
     }
     private static void showYoungest(String name[],String pic[],int age[]) {
-
+        double minAge=Integer.MAX_VALUE;
+        int spot=0;
+        for (int i=0; i<age.length;i++){
+            if (age[i]<minAge){
+                minAge=age[i];
+                spot=i;
+            }
+        }
+        System.out.println("Name: "+name[spot]+ " "+pic[spot]);
     }
     // First alphabetically, by name (not the first name in the array)
     private static void showFirst() {
