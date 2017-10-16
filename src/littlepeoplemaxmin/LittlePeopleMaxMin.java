@@ -82,12 +82,12 @@ public class LittlePeopleMaxMin {
                 break;
             case 'F':
             case 'f':
-                showFirst();
+                showFirst(name,pic);
                 break;
             case 'L':
             case 'l':
             case '1':                                      // one, just in case
-                showLast();
+                showLast(name,pic);
                 break;
             default:
                 System.out.println("\nERROR:  option was invalid");
@@ -96,54 +96,54 @@ public class LittlePeopleMaxMin {
 
     private static void showPoorest(String name[],String pic[],double salary[]) {
         double minSal=Integer.MAX_VALUE;
-        int spot=0;
+        int index=0;
         for (int i=0; i<salary.length;i++){
             if (salary[i]<minSal){
                 minSal=salary[i];
-                spot=i;
+                index=i;
             }
         }
-        System.out.println("Name: "+name[spot]+ " "+pic[spot]);
+        System.out.println("Name: "+name[index]+ " "+pic[index]);
     }
     private static void showRichest(String name[],String pic[],double salary[]) {
         double maxSal=Integer.MIN_VALUE;
-        int spot=0;
+        int index=0;
         for (int i=0; i<salary.length;i++){
             if (salary[i]>maxSal){
                 maxSal=salary[i];
-                spot=i;
+                index=i;
             }
         }
-        System.out.println("Name: "+name[spot]+ " "+pic[spot]);
+        System.out.println("Name: "+name[index]+ " "+pic[index]);
     }
     private static void showOldest(String name[],String pic[],int age[]) {
         double maxAge=Integer.MIN_VALUE;
-        int spot=0;
+        int index=0;
         for (int i=0; i<age.length;i++){
             if (age[i]>maxAge){
                 maxAge=age[i];
-                spot=i;
+                index=i;
             }
         }
-        System.out.println("Name: "+name[spot]+ " "+pic[spot]);
+        System.out.println("Name: "+name[index]+ " "+pic[index]);
     }
     private static void showYoungest(String name[],String pic[],int age[]) {
         double minAge=Integer.MAX_VALUE;
-        int spot=0;
+        int index=0;
         for (int i=0; i<age.length;i++){
             if (age[i]<minAge){
                 minAge=age[i];
-                spot=i;
+                index=i;
             }
         }
-        System.out.println("Name: "+name[spot]+ " "+pic[spot]);
+        System.out.println("Name: "+name[index]+ " "+pic[index]);
     }
     // First alphabetically, by name (not the first name in the array)
-    private static void showFirst() {
+    private static void showFirst(String name[],String pic[]) {
 
     }
     // Last alphabetically, by name (not the last name in the array)
-    private static void showLast() {
+    private static void showLast(String name[],String pic[]) {
 
     }
 }
